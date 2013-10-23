@@ -93,7 +93,7 @@ class Filesystem {
 		}
 		else
 		{
-			return $this->put($path, $data);
+			return $this->put($data);
 		}
 	}
 
@@ -289,19 +289,11 @@ class Filesystem {
 	 * @param  string  $path
 	 * @param  int     $mode
 	 * @param  bool    $recursive
-	 * @param  bool    $force
 	 * @return bool
 	 */
-	public function makeDirectory($path, $mode = 0777, $recursive = false, $force = false)
+	public function makeDirectory($path, $mode = 0777, $recursive = false)
 	{
-		if ($force)
-		{
-			return @mkdir($path, $mode, $recursive);
-		}
-		else
-		{
-			return mkdir($path, $mode, $recursive);
-		}
+		return mkdir($path, $mode, $recursive);
 	}
 
 	/**

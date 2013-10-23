@@ -48,18 +48,18 @@ class WorkCommand extends Command {
 	 */
 	public function fire()
 	{
-		$queue = $this->option('queue');
+		$queue = $this->input->getOption('queue');
 
-		$delay = $this->option('delay');
+		$delay = $this->input->getOption('delay');
 
 		// The memory limit is the amount of memory we will allow the script to occupy
 		// before killing it and letting a process manager restart it for us, which
 		// is to protect us against any memory leaks that will be in the scripts.
-		$memory = $this->option('memory');
+		$memory = $this->input->getOption('memory');
 
-		$connection = $this->argument('connection');
+		$connection = $this->input->getArgument('connection');
 
-		$this->worker->pop($connection, $queue, $delay, $memory, $this->option('sleep'));
+		$this->worker->pop($connection, $queue, $delay, $memory, $this->input->getOption('sleep'));
 	}
 
 	/**
@@ -88,7 +88,7 @@ class WorkCommand extends Command {
 
 			array('memory', null, InputOption::VALUE_OPTIONAL, 'The memory limit in megabytes', 128),
 
-			array('sleep', null, InputOption::VALUE_OPTIONAL, 'Number of seconds to sleep when no job is available', 3),
+			array('sleep', null, InputOption::VALUE_NONE, 'Whether the worker should sleep when no job is available'),
 		);
 	}
 

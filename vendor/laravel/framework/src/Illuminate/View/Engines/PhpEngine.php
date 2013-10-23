@@ -42,7 +42,7 @@ class PhpEngine implements EngineInterface {
 			$this->handleViewException($e);
 		}
 
-		return ltrim(ob_get_clean());
+		return ob_get_clean();
 	}
 
 	/**

@@ -48,7 +48,7 @@ class ListenCommand extends Command {
 	 */
 	public function fire()
 	{
-		$this->setListenerOptions();
+		$this->listener->setEnvironment($this->laravel->environment());
 
 		$delay = $this->input->getOption('delay');
 
@@ -88,18 +88,6 @@ class ListenCommand extends Command {
 	}
 
 	/**
-	 * Set the options on the queue listener.
-	 *
-	 * @return void
-	 */
-	protected function setListenerOptions()
-	{
-		$this->listener->setEnvironment($this->laravel->environment());
-
-		$this->listener->setSleep($this->option('sleep'));
-	}
-
-	/**
 	 * Get the console command arguments.
 	 *
 	 * @return array
@@ -126,8 +114,6 @@ class ListenCommand extends Command {
 			array('memory', null, InputOption::VALUE_OPTIONAL, 'The memory limit in megabytes', 128),
 
 			array('timeout', null, InputOption::VALUE_OPTIONAL, 'Seconds a job may run before timing out', 60),
-
-			array('sleep', null, InputOption::VALUE_OPTIONAL, 'Seconds to wait before checking queue for jobs', 3),
 		);
 	}
 

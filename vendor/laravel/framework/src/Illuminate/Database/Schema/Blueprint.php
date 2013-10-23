@@ -270,16 +270,6 @@ class Blueprint {
 	}
 
 	/**
-	* Indicate that the soft delete column should be dropped.
-	*
-	* @return void
-	*/
-	public function dropSoftDeletes()
-	{
-		$this->dropColumn('deleted_at');
-	}
-
-	/**
 	 * Rename the table to a given name.
 	 *
 	 * @param  string  $to

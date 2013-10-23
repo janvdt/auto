@@ -27,11 +27,4 @@ interface ReminderRepositoryInterface {
 	 */
 	public function delete($token);
 
-	/**
-	 * Delete expired reminders.
-	 *
-	 * @return void
-	 */
-	public function deleteExpired();
-
 }
