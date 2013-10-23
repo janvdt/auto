@@ -43,3 +43,5 @@ Route::get('logout', function() {
 	return Redirect::to('/');
 
 });
+
+Route::resource('store', 'StoreController');

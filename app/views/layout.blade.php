@@ -9,7 +9,10 @@
 		<title>De Keyser AutoParts</title>
 	
 		<!-- Latest compiled and minified CSS -->
+
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/libraries/bootstrap-wysihtml5/css/bootstrap-wysihtml5.css">
+		
 
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-theme.min.css">
@@ -61,13 +64,26 @@
 <script src="/assets/libraries/thumbnail/js/modernizr.custom.js"></script>
 <script src="/assets/libraries/thumbnail/js/grid.js"></script>
 <!-- Latest compiled and minified JavaScript -->
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="/assets/libraries/bootstrap-wysihtml5/js/wysihtml5-0.3.0.js"></script>
+<script src="/assets/libraries/bootstrap-wysihtml5/js/bootstrap-wysihtml5.js"></script>
 
 <script>
 			$(function() {
 				Grid.init();
 			});
 		</script>
+<script>
+$('#inputTextarea').wysihtml5({
+	"font-styles": true, //Font styling, e.g. h1, h2, etc. Default true
+	"emphasis": true, //Italics, bold, etc. Default true
+	"lists": true, //(Un)ordered lists, e.g. Bullets, Numbers. Default true
+	"html": false, //Button which allows you to edit the generated HTML. Default false
+	"link": true, //Button to insert a link. Default true
+	"image": false, //Button to insert an image. Default true,
+	"color": false //Button to change color of font  
+});
+</script>
 
 
 

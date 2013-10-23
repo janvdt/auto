@@ -112,8 +112,9 @@
             	<li>
                     <p class="winkels">{{$store->name}}
                     	@if(Auth::user())
-                    	<button type="button" class="btn btn-default btn-small">
+                    	<button type="button" class="btn btn-default btn-small"><a href="{{ URL::action('StoreController@edit', array($store->id)) }}">
   						<span class="glyphicon glyphicon-pencil"></span> edit
+  					</a>
 						</button>
 						@endif
 					</p>
