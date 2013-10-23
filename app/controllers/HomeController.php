@@ -15,16 +15,9 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function index()
+	public function showWelcome()
 	{
-		$stores = Store::all();
-		$thule = Brand::where('name','Thule')->first();
-		$autostyle = Brand::where('name','AutoStyle')->first();
-
-		return View::make('hello')
-			->with('stores',$stores)
-			->with('thule',$thule)
-			->with('autostyle',$autostyle);
+		return View::make('hello');
 	}
 
 }
