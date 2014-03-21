@@ -29,6 +29,7 @@ return array(
     'Jeremeamia\\SuperClosure' => array($vendorDir . '/jeremeamia/SuperClosure/src'),
     'Intervention\\Image' => array($vendorDir . '/intervention/image/src'),
     'Illuminate' => array($vendorDir . '/laravel/framework/src'),
+    'Hybrid' => array($vendorDir . '/hybridauth/hybridauth/hybridauth'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),

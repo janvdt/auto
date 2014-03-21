@@ -44,4 +44,16 @@ Route::get('logout', function() {
 
 });
 
+Route::get('files', 'FileController@index');
+Route::post('files', 'FileController@store');
+Route::post('images', 'ImageController@index');
 Route::resource('store', 'StoreController');
+Route::resource('brand', 'BrandController');
+Route::resource('image', 'ImageController');
+Route::post('bullbar/getArticles', 'BullbarController@getArticles');
+Route::get('bullbar/getYears/{id}', 'BullbarController@getYears');
+Route::get('bullbar/getTypes/{id}', 'BullbarController@getTypes');
+Route::resource('bullbar', 'BullbarController');
+Route::get('bullbar/getModels/{id}', 'BullbarController@getModels');
+
+

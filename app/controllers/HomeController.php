@@ -17,7 +17,7 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
-		$stores = Store::all();
+		$stores = Store::take(3)->get();
 		$thule = Brand::where('name','Thule')->first();
 		$autostyle = Brand::where('name','AutoStyle')->first();
 
